@@ -88,7 +88,7 @@
     padding: 8px 12px;
     @include mediaMaxSM {
       padding: 6px 10px;
-      max-width: calc(100vw - #{$padding} * 3);
+      max-width: calc(100vw - (#{$padding} * 2) - (24px * 2) );
     }
   }
   .tippy-arrow {
