@@ -1,0 +1,97 @@
+.rect-black-btn {
+  flex-shrink: 0;
+  padding: 22px 24px;
+  border-radius: 16px;
+  color: $white;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+  background: $black;
+  transition-property: color, opacity;
+  @include trAn3;
+
+  @include mediaMaxXL {
+    padding: 20px 24px;
+  }
+
+  @include mediaMaxSM {
+    padding: 14px 24px;
+    border-radius: 12px;
+  }
+  @include desctopHover {
+    color: $white_60;
+  }
+  &:active {
+    color: $white_60;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 1px solid $white;
+  }
+  &:disabled,
+  &[aria-disabled="true"] {
+    pointer-events: none;
+    opacity: .6;
+  }
+}
+
+.question-btn {
+  padding: 0 16px;
+  @include mediaMaxLG {
+    padding: 0 17px;
+  }
+  @include mediaMaxSM {
+    padding: 0 12px;
+  }
+  svg {
+    width: 20px;
+    height: 27px;
+    @include mediaMaxSM {
+      width: 14px;
+      height: 20px;
+    }
+    path {
+      transition-property: fill-opacity;
+      @include trAn3;
+    }
+  }
+
+  @include desctopHover {
+    svg path {
+      fill-opacity: .8;
+    }
+  }
+  &:active {
+    svg path {
+      fill-opacity: .8;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 1px solid $white;
+  }
+}
+
+.tippy-box {
+  border-radius: 10px;
+  background-color: $black;
+
+  @include mediaMaxSM {
+    border-radius: 6px;
+  }
+  .tippy-content {
+    padding: 8px 12px;
+    @include mediaMaxSM {
+      padding: 6px 10px;
+      max-width: calc(100vw - #{$padding} * 3);
+    }
+  }
+  .tippy-arrow {
+    color: $black;
+  }
+}

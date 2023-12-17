@@ -1,0 +1,59 @@
+.tarifs {
+  padding: 48px 0;
+  @include mediaMaxXL {
+    padding: $paddingXL 0;
+  }
+  @include mediaMaxSM {
+    padding: 24px 0;
+  }
+  &__header {
+    margin-bottom: 48px;
+
+    @include mediaMaxXL {
+      gap: 16px;
+    }
+
+    @include mediaMaxMD {
+      margin-bottom: 40px;
+      gap: 12px;
+    }
+
+    @include mediaMaxSM {
+      margin-bottom: 32px;
+    }
+
+    span {
+      color: $grayLight;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 140%;
+      @include mediaMaxSM {
+        font-size: 14px;
+      }
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    @include mediaMaxLG {
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+      gap: 12px;
+    }
+  }
+  &__item {
+    &_best {
+      @include mediaMaxLG {
+        order: -1;
+      }
+    }
+    &_noguar {
+      @include mediaMaxLG {
+        order: 2;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: clip;
+  font-family: $mainFont;
+  font-size: 16px;
+  line-height: 140%;
+  color: $black;
+  background-color: $bgc;
+  @include mediaMaxXL {
+    font-size: 14px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+svg {
+  display: block;
+}
+
+input {
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 $paddingXXL;
+  max-width: calc($contentMaxWidth + $paddingXXL * 2);
+  @include mediaMaxXL {
+    padding: 0 $paddingXL;
+  }
+  @include mediaMaxSM {
+    padding: 0 $padding;
+  }
+}
+
+.desc {
+  color: $black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.33;
+
+  @include mediaMaxLG {
+    font-size: 14px;
+  }
+
+  &_18 {
+    font-size: 18px;
+    @include mediaMaxLG {
+      font-size: 16px;
+    }
+  }
+
+  &_14 {
+    font-size: 14px;
+    @include mediaMaxLG {
+      font-size: 12px;
+    }
+  }
+
+  &_12 {
+    font-size: 12px;
+    @include mediaMaxLG {
+      font-size: 10px;
+    }
+  }
+}
+
+.title {
+  font-family: $mainFont;
+  color: $black;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.title-1 {
+  @extend .title;
+  font-size: 56px;
+  @include mediaMaxXL {
+    font-size: 48px;
+  }
+  @include mediaMaxSM {
+    font-size: 32px;
+    line-height: 120%;
+  }
+}
+
+.title-2 {
+  @extend .title;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 120%;
+  strong {
+    font-weight: inherit;
+  }
+  @include mediaMaxXL {
+    font-size: 32px;
+    font-weight: 600;
+  }
+  @include mediaMaxSM {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+.title-3 {
+  @extend .title;
+  font-size: 32px;
+  line-height: 120%;
+  @include mediaMaxXL {
+    font-size: 24px;
+  }
+  @include mediaMaxSM {
+    font-size: 20px;
+  }
+}
+
+.title-4 {
+  @extend .title;
+  font-size: 56px;
+  @include mediaMaxXL {
+    font-size: 48px;
+  }
+  @include mediaMaxSM {
+    font-size: 32px;
+    line-height: 120%;
+  }
+}
+
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-inherit {
+  text-align: inherit;
+}
+
+.color-white {
+  color: $white;
+}
+
+.color-gray {
+  color: $gray;
+}
+
+.faded {
+  animation: fade 0.3s ease forwards;
+}
+
+.unselect {
+  @include unselect;
+}
+
+.d-col-small {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @include mediaMaxSM {
+    gap: 4px;
+  }
+}
+
+.d-col-big {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include mediaMaxSM {
+    gap: 20px;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.d-none {
+  display: none !important;
+}
